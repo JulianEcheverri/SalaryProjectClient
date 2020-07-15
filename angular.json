@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "SalaryProjectClient"
+    }
+  },
+  "defaultProject": "SalaryProjectClient",
+  "cli": {
+    "analytics": false
+  }
 }
