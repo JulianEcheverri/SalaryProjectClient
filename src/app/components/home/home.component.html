@@ -1,5 +1,5 @@
-<div class="co-12">
-    <div class="col-6">
+<div class="co-md-12 row form-group">
+    <div class="col-md-4">
         <form #form="ngForm" autocomplete="off" (submit)="getEmployee()">
             <div class="form-group">
                 <div class="input-group">
@@ -11,7 +11,7 @@
             </div>
         </form>
     </div>
-    <div class="col-6">
-        <app-employee-list [employeeList]="employeeList"></app-employee-list>
+    <div class="col-md-8">
+        <app-employee-list [employeeList]="employeeList" *ngIf="employeeList.length != 0"></app-employee-list>
     </div>
 </div>

@@ -11,7 +11,7 @@ import { EmployeeServiceService } from 'src/app/services/employee-service.servic
 export class HomeComponent implements OnInit {
 
   id: string = null;
-  employeeList: EmployeeModel[];
+  employeeList: EmployeeModel[] = [];
   employee: EmployeeModel;
 
   constructor(public employeeServiceService: EmployeeServiceService) { }
@@ -20,7 +20,7 @@ export class HomeComponent implements OnInit {
   }
 
   getEmployee() {
-    if (this.id === null) {
+    if (this.id === null || this.id === '') {
       this.employeeServiceService.getEmployees().subscribe((resp: any) => {
         console.log(resp);
         this.employeeList = resp;
@@ -34,6 +34,7 @@ export class HomeComponent implements OnInit {
         // console.log(this.employee);
       }, (error: any) => {
         console.log(error);
+        this.employeeList = [];
       });
     }
   }
