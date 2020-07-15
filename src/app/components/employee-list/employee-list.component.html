@@ -1,1 +1,15 @@
-<p>employee-list works!</p>
+<table>
+    <thead>
+        <tr></tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of employeeList">
+            <td>{{item.name}}</td>
+            <td>{{item.contractTypeName}}</td>
+            <td>{{item.roleDescription}}</td>
+            <td>{{item.hourlySalary}}</td>
+            <td>{{item.monthlySalary}}</td>
+            <td>{{item.annualSalary}}</td>
+        </tr>
+    </tbody>
+</table>
