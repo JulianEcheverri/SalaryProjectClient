@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { EmployeeListComponent } from './components/employee-list/employee-list.component';
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './components/home/home.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EmployeeListComponent,
-    HomeComponent
+    HomeComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
